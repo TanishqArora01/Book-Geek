@@ -165,7 +165,6 @@ BookSage-AI/
 ├── .gitignore                   # Project-wide ignore rules
 ├── app.png                      # Demo picture
 ├── app-1.png                    # Demo picture
-├── demo.mp4                     # Demo video
 ├── docker-compose.yml   
 ├── LICENSE   
 ├── README.md                    # Project documentation
