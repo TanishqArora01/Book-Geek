@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --font-inter: "DM Sans", sans-serif;
+
+  --color-bg-body: #f8f6ef;
+  --color-bg-card: #ffffff;
+  --color-bg-hover: #eef5ff;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #5b6472;
+  --color-text-muted: #8b95a7;
+  --color-accent: #0b7285;
+  --color-accent-hover: #095c6c;
+  --color-border: #dce4ef;
+
+  --shadow-sm: 0 8px 20px rgba(31, 41, 55, 0.05);
+  --shadow-md: 0 14px 30px rgba(11, 114, 133, 0.12);
+  --shadow-lg: 0 24px 50px rgba(31, 41, 55, 0.18);
+
+  --radius-lg: 12px;
+  --radius-sm: 8px;
+}
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  --bg-hero: radial-gradient(circle at 12% 18%, #ffb997 0%, #f27b4f 28%, transparent 55%), radial-gradient(circle at 88% 7%, #7bdff2 0%, #4bbdd4 26%, transparent 53%), linear-gradient(128deg, #0f172a 0%, #1f2a44 42%, #15223f 100%);
+}
+
+body {
+  @apply bg-bg-body text-text-primary min-h-screen overflow-x-hidden font-inter;
+  line-height: 1.6;
+  background-image: radial-gradient(circle at 20% 10%, rgba(255, 187, 132, 0.22), transparent 35%), radial-gradient(circle at 80% 90%, rgba(106, 177, 255, 0.2), transparent 36%);
+}
+
+/* Mirror Match Component Styles */
+.hero-section {
+  background: var(--bg-hero);
+  color: #fff;
+  position: relative;
+}
+
+.hero-badge {
+  @apply inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 rounded-full text-[0.7rem] font-semibold mb-6 backdrop-blur-md border border-white/20;
+}
+
+.hero-title {
+  font-family: "Space Grotesk", sans-serif;
+  @apply text-5xl md:text-7xl font-[700] mb-4 tracking-tight text-white drop-shadow-lg;
+}
+
+.hero-subtitle {
+  @apply text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-medium leading-relaxed;
+}
+
+.search-container {
+  @apply w-full max-w-xl mx-auto relative;
+}
+
+.search-input-wrapper {
+  @apply flex bg-white rounded-xl shadow-2xl overflow-hidden focus-within:ring-4 focus-within:ring-[#7bdff2]/35 transition-all border border-transparent;
+}
+
+.search-btn-accent {
+  @apply bg-[#0b7285] hover:bg-[#095c6c] px-6 text-white transition-all flex items-center justify-center;
+}
+
+/* Method Badges */
+.method-badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-[0.78rem] font-[700] uppercase tracking-wider shadow-sm border border-black/5;
+}
+
+.method-badge-hybrid {
+  @apply bg-[#fef3c7] text-[#92400e];
+}
+
+.method-badge-collaborative {
+  @apply bg-[#d9f3ff] text-[#0c4a6e];
+}
+
+.method-badge-content {
+  @apply bg-[#dcfce7] text-[#166534];
+}
+
+/* Animations */
+.animate-in {
+  animation: fadeInDown 0.55s ease-out forwards;
+}
+
+.stagger-item {
+  opacity: 0;
+  animation: cardRise 0.55s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -220% 0;
+  }
+
+  100% {
+    background-position: 220% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #edf2ff 0%, #ffffff 45%, #edf2ff 100%);
+  background-size: 250% 100%;
+  animation: shimmer 1.45s ease-in-out infinite;
+}
+
+@keyframes progressSweep {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(360%);
+  }
+}
+
+.animate-progress {
+  animation: progressSweep 1.25s ease-in-out infinite;
+}
+
+/* Custom styles for matching the original UI */
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(180deg, #f8f6ef 0%, #f7f2e8 55%, #eef5ff 100%);
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(11, 114, 133, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float 18s infinite linear;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh) translateX(0);
+  }
+
+  to {
+    transform: translateY(-100px) translateX(100px);
+  }
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  @apply bg-white/40 backdrop-blur-lg border border-white/60 shadow-xl;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(11, 114, 133, 0.12) 0%, rgba(255, 187, 132, 0.18) 100%);
+}
+
+/* BookCard Hover Fix - Scale Only, No Layout Shift */
+.book-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.2s ease;
+  transform-origin: center;
+  box-shadow: 0 8px 22px rgba(31, 41, 55, 0.06);
+}
+
+.book-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: #b8cbe3;
+  box-shadow: 0 28px 45px -20px rgba(13, 53, 89, 0.4);
+  z-index: 20;
+}
+
+/* Ensure buttons are always visible */
+.book-card-actions {
+  min-height: 44px;
+  /* Touch-friendly minimum */
+}
+
+.book-card-actions button {
+  min-width: fit-content;
+  flex: 1 1 auto;
+}
+
+/* Responsive helper */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.65rem;
+  }
+
+  .book-card-actions button {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.5rem;
+  }
+}
