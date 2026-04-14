@@ -1,4 +1,4 @@
-# **BookSage AI: hybrid book recommendation system**
+# **BookGeek AI: hybrid book recommendation system**
 
 <p align="center">
   <a href="https://scikit-learn.org/"><img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"></a>
@@ -46,7 +46,7 @@ BookGeek AI is a **hybrid book recommendation system** combining **Collaborative
 
 ## **Comparison with Standard Systems**
 
-| Feature | BookSage AI | Typical Recommenders |
+| Feature | BookGeek AI | Typical Recommenders |
 |---------|------------|----------------------|
 | Method Flexibility | 3 modes + hybrid tuning | Usually single-method |
 | Cold Start Handling | Popular books fallback | Often fails |
@@ -191,6 +191,8 @@ The project includes an intelligent launcher that automatically handles dependen
 
 ```bash
 # Clone the repository
+git clone https://github.com/TanishqArora01/Book-Geek.git
+cd Book-Geek
 
 # Run the automated setup and launcher
 python run.py
