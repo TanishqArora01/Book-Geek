@@ -16,27 +16,7 @@
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></a>
 </p>
 
-BookSage AI is a **hybrid book recommendation system** combining **Collaborative Filtering (KNN-based)** and **Content-Based (TF-IDF + Cosine Similarity)** models, with a weighted hybrid approach for personalized results. The project ingests and preprocesses large-scale book datasets, applies active-user and popular-book filtering, and dynamically generates recommendations enriched with metadata (title, author, publisher, year, and cover image). I engineered a **modern, monolithic architecture** with separate **FastAPI JSON API** and **React (Tailwind/DaisyUI) Frontend**, ensuring scalability and maintainability. The system is fully containerized with **Docker**, featuring automated orchestration and a robust **CI/CD pipeline** with 100% backend test coverage and comprehensive frontend unit tests. This design demonstrates proficiency in **ML model building, asynchronous API development, modern SPA implementation, containerization, and industry-grade deployment workflows**.
-
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/648d13d4-12d7-4fbe-95ca-a7684430016f" width="100%" controls>
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-<div align="center">
-  <img src="app.png" alt="BookSage-AI" width="100%">
-</div>
-
-<div align="center">
-  <img src="app-1.png" alt="BookSage-AI" width="100%">
-</div>
-
----
-
-## **Live Demo**
-
-**Try the Hybrid Book Recommendation System live:** [https://booksage-ai.onrender.com/](https://booksage-ai.onrender.com/)
+BookGeek AI is a **hybrid book recommendation system** combining **Collaborative Filtering (KNN-based)** and **Content-Based (TF-IDF + Cosine Similarity)** models, with a weighted hybrid approach for personalized results. The project ingests and preprocesses large-scale book datasets, applies active-user and popular-book filtering, and dynamically generates recommendations enriched with metadata (title, author, publisher, year, and cover image). I engineered a **modern, monolithic architecture** with separate **FastAPI JSON API** and **React (Tailwind/DaisyUI) Frontend**, ensuring scalability and maintainability. The system is fully containerized with **Docker**, featuring automated orchestration and a robust **CI/CD pipeline** with 100% backend test coverage and comprehensive frontend unit tests. This design demonstrates proficiency in **ML model building, asynchronous API development, modern SPA implementation, containerization, and industry-grade deployment workflows**.
 
 ---
 
@@ -78,7 +58,7 @@ BookSage AI is a **hybrid book recommendation system** combining **Collaborative
 ## **Project Structure**
 
 ```
-BookSage-AI/
+Book-Geek/
 ├── .github/
 │   └── workflows/
 │       └── main.yml             # CI/CD Pipeline tracking tests and linting
@@ -151,7 +131,6 @@ BookSage-AI/
 │   │   ├── App.test.js
 │   │   ├── index.css
 │   │   ├── index.js
-│   │   ├── reportWebVitals.js
 │   │   └── setupTests.js        # Vitest environment setup
 │   ├── Dockerfile               # Multi-stage production build (Nginx)
 │   ├── package.json             # Frontend dependencies and scripts
@@ -163,8 +142,6 @@ BookSage-AI/
 │   └── experiment.ipynb         
 |
 ├── .gitignore                   # Project-wide ignore rules
-├── app.png                      # Demo picture
-├── app-1.png                    # Demo picture
 ├── docker-compose.yml   
 ├── LICENSE   
 ├── README.md                    # Project documentation
@@ -214,8 +191,6 @@ The project includes an intelligent launcher that automatically handles dependen
 
 ```bash
 # Clone the repository
-git clone https://github.com/Md-Emon-Hasan/BookSage-AI.git
-cd BookSage-AI
 
 # Run the automated setup and launcher
 python run.py
@@ -229,7 +204,7 @@ python run.py
 #### **Local Development (Simultaneous)**
 Use the unified local runner at the project root to start both services:
 ```bash
-cd BookSage-AI
+cd Book-Geek
 python run.py
 ```
 *   **Backend**: `http://127.0.0.1:8000`
@@ -299,9 +274,6 @@ Our GitHub Actions pipeline (`.github/workflows/main.yml`) automatically perform
   
 **Prepared by:**  
 
-**Md Emon Hasan**  
-**Email:** [emon.mlengineer@gmail.com](mailto:emon.mlengineer@gmail.com)
-**WhatsApp:** [+8801834363533](https://wa.me/8801834363533)  
-**GitHub:** [Md-Emon-Hasan](https://github.com/Md-Emon-Hasan)  
-**LinkedIn:** [Md Emon Hasan](https://www.linkedin.com/in/md-emon-hasan-695483237/)  
-**Facebook:** [Md Emon Hasan](https://www.facebook.com/mdemon.hasan2001/)
+**Tanishq**  
+**Email:** [aroratanishq54@gmail.com](mailto:aroratanishq54@gmail.com)
+
